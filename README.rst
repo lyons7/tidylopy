@@ -34,10 +34,12 @@ tidylopy
 ========
 
 
-    Add a short description here!
+    Python adaptation of Python adaptation of Schnoebelen, Silge and Hayes's (2020) `tidylo <https://github.com/juliasilge/tidylo>`_ R library
 
 
-A longer description of your project goes here...
+
+
+Nothing fancy -- I just wanted to be able to replicate the default ``bind_log_odds`` command from `tidylo <https://github.com/juliasilge/tidylo>`_! The function is located in `src/tidylopy <https://github.com/lyons7/tidylopy/blob/main/src/tidylopy/tidylopy.py>`_.
 
 
 .. _pyscaffold-notes:
