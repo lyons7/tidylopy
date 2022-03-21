@@ -39,7 +39,7 @@ tidylopy
 
 
 
-Nothing fancy -- I just wanted to be able to replicate the default ``bind_log_odds`` command from `tidylo <https://github.com/juliasilge/tidylo>`_! The function is located in `src/tidylopy <https://github.com/lyons7/tidylopy/blob/main/src/tidylopy/tidylopy.py>`_.
+Nothing fancy -- I'm a huge fan of the new `tidylo <https://github.com/juliasilge/tidylo>`_ R library and wanted to be able to replicate the default ``bind_log_odds`` function in Python! The function is located in `src/tidylopy <https://github.com/lyons7/tidylopy/blob/main/src/tidylopy/tidylopy.py>`_, and the `examples <https://github.com/lyons7/tidylopy/tree/main/examples>`_ folder has a .ipynb notebook demonstrating how to use it + compares results on the same data of ``bind_log_odds`` from tidylo and ``get_weighted_log_odds`` from tidylopy!
 
 
 .. _pyscaffold-notes:
