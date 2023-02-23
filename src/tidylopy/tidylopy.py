@@ -23,7 +23,7 @@ def get_weighted_log_odds(dataFrame, groupSet, featureName, nCount):
     pseudo_counts = dataFrame_III.merge(n_is, on= groupSet, how = 'left')  # Combine everything together! Now ready to do weighted log odds calc
     pseudo_counts['omega_wi'] = pseudo_counts['y_wi'] / (pseudo_counts['n_i'] - pseudo_counts['y_wi'])  # # odds in group i
     pseudo_counts['omega_w'] = pseudo_counts['y_w'] / (sum(pseudo_counts['y_wi']) - pseudo_counts['y_w'])  # overall odds
-    pseudo_counts['delta_wi'] = (np.log(pseudo_counts['omega_wi'])) - (np.log(pseudo_counts['omega_w']))   # eqn 15 << not sure what this means, it's in OG R code
+    pseudo_counts['delta_wi'] = (np.log(pseudo_counts['omega_wi'])) - (np.log(pseudo_counts['omega_w']))   # eqn 15
     pseudo_counts['sigma2_wi'] = 1 / pseudo_counts['y_wi'] + 1 / pseudo_counts['y_w']           # eqn 18
     pseudo_counts['zeta_wi'] = pseudo_counts['delta_wi'] / (np.sqrt(pseudo_counts['sigma2_wi']))       # eqn 21
     return pseudo_counts.rename(columns={'zeta_wi': 'log_odds_weighted', 'delta_wi': 'log_odds'}).sort_values('log_odds_weighted', ascending = False)
